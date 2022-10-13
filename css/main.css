@@ -1,3 +1,9 @@
+:root{
+    /*
+    
+    */
+
+    
 /********. is for class selectors*****/
 .container {
     max-width: 900px;
@@ -34,5 +40,47 @@ h2 + p{
 
 .stars span{
     cursor: pointer;
+}
+/**** [] is attribute selectors ****/
+a[href="#"]{
+    color: tomato;
+}
+a[href^="http"]{
+    border-left: 4px solid #551cf1;
+}
+
+/*** state related psedudo clsses ***/
+nav a,
+nav a:link,
+nav a:visited{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: transform .5s;
+}
+
+nav a:hover,
+nav a:focus{
+    text-decoration: underline;
+    transform: scale(1.4);
+}
+nav a:active{
+    transform: scale(1.4) translate(10px);
+}
+
+/*****Pseduo elements****/
+a[href$="pdf"]::after{
+    content: "\2913";
+    font-size: 1.25rem;
+    color: tomato;
+}
+h2+p::first-line{
+    color: tomato;
+}
+h3+p::first-letter{
+    background-color: #551cf1;
+    color: white;
+    padding: .25rem;
+    margin-right: .10rem;
 }
 
