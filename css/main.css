@@ -1,0 +1,38 @@
+/********. is for class selectors*****/
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+/****space is descendent selector***/
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0%;
+}
+/*** space is descendent selector****/
+nav ul li{
+    flex: 1;
+}
+
+/**** > is child combinator*****/
+main > p{
+    font-size: 1.25rem;
+}
+
+/****** + is adjacent combinator****/
+h2 + p{
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+
+/**** ~ is sibling combinator*****/
+.stars span:hover ~ span{
+    opacity: .5;
+}
+
+.stars span{
+    cursor: pointer;
+}
+
